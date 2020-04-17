@@ -116,8 +116,8 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
-# ${catkin_INCLUDE_DIRS}
+ include
+ ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -152,6 +152,9 @@ include_directories(
 
 add_executable(hello_world src/hello_world.cpp)
 target_link_libraries(hello_world ceres ${catkin_LIBRARIES})
+
+add_executable(pose_graph_3d src/pose_graph_3d/pose_graph_3d.cc)
+target_link_libraries(pose_graph_3d ceres ${catkin_LIBRARIES})
 
 #############
 ## Install ##
